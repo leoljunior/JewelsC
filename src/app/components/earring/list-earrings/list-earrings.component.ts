@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CreateEarringsService } from '../create-earrings.service';
 import { Earring } from '../earring';
 
 
@@ -8,17 +9,12 @@ import { Earring } from '../earring';
   styleUrls: ['./list-earrings.component.css']
 })
 export class ListEarringsComponent implements OnInit {
-  earringList: Earring[]
-  @Input() dados: []
+  earringList: Earring[]  
 
-
-  
-
-  constructor() { }
-
+  constructor(private earringService: CreateEarringsService) { }
  
   ngOnInit(): void {
-    this.earringList = this.dados
+   this.earringList = this.earringService.getAll()
   }
 
 }

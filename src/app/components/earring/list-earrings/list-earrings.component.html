@@ -15,7 +15,7 @@
             <td>{{ earring.id }}</td>
             <td>{{ earring.material }}</td>
             <td>{{ earring.warranty }}</td>
-            <td>{{ earring.price }}</td>
+            <td>{{ earring.price | currency: 'BRL' }}</td>
         </tr>
     </tbody>
 </table>

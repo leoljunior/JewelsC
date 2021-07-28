@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CreateEarringsService } from '../create-earrings.service';
 import { Earring } from '../earring'
 
 @Component({
@@ -6,16 +7,22 @@ import { Earring } from '../earring'
   templateUrl: './create-earrings.component.html',
   styleUrls: ['./create-earrings.component.css']
 })
-export class CreateEarringsComponent  { 
+export class CreateEarringsComponent implements OnInit  { 
 
-  earring: Earring = new Earring()
-  earringList: Earring[] = []
-  
-  constructor() { }  
+  earring: Earring
+  earringList: Earring[]
 
-  save(form) {
-    this.earringList.push(this.earring)
-    console.log(this.earringList)
+  constructor(private earringService: CreateEarringsService) { }  
+
+  ngOnInit() {
     this.earring = new Earring()
+    this.earringService.loadLocal()
+    this.earringList = this.earringService.getAll()
+  }  
+
+  save(earringForm) {
+   this.earringService.save(this.earring)
+   this.earring = new Earring()
+   earringForm.reset()
   }
 }
