@@ -1,0 +1,21 @@
+<h2>Brincos para venda</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Código</th>
+            <th>Material</th>
+            <th>Garantia</th>
+            <th>Preço de venda</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let earring of earringList">
+            <td>{{ earring.date }}</td>
+            <td>{{ earring.id }}</td>
+            <td>{{ earring.material }}</td>
+            <td>{{ earring.warranty }}</td>
+            <td>{{ earring.price }}</td>
+        </tr>
+    </tbody>
+</table>

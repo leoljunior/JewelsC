@@ -1,0 +1,36 @@
+<h2>Cadastro de Brincos</h2>
+
+<form #earringForm (submit)="save(earringForm)">
+    <div>
+        <label for="date-ring">Data</label>
+        <input type="text" name="date-ring" id="date-ring" #datering [(ngModel)]="earring.date">
+    </div>
+    <div>
+        <label for="code-ring">Código</label>
+        <input type="number" name="code-ring" id="code-ring" #codering [(ngModel)]="earring.id">
+    </div>
+    <div>
+        <label for="material-ring">Material</label>
+        <input type="text" name="material-ring" id="material-ring" #materialring [(ngModel)]="earring.material">
+    </div>
+    <div>
+        <label for="warranty-ring">Garantia</label>
+        <input type="text" name="warranty-ring" id="warranty-ring" #warrantyring [(ngModel)]="earring.warranty">
+    </div>
+    <div>
+        <label for="price-ring">Preço</label>
+        <input type="number" name="price-ring" id="price-ring" #pricering [(ngModel)]="earring.price">
+    </div>
+
+    <input type="submit" value="Salvar">   
+
+    
+    
+</form>
+
+
+
+
+
+
+    <app-list-earrings [dados]="earringList"></app-list-earrings>
