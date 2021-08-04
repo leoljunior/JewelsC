@@ -16,7 +16,6 @@ export class CreateEarringsComponent implements OnInit  {
 
   ngOnInit() {
     this.earring = new Earring()
-    this.earringService.loadLocal()
     this.earringList = this.earringService.getAll()
   }  
 
