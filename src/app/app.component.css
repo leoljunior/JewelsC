@@ -4,8 +4,15 @@
     justify-content: center;
     align-items: center; 
     background-color: rgb(170, 89, 245);
+    
 }
 
-.menu {
+.menu  {
     margin-bottom: 10px;
+    
+}
+
+.menu a {
+    text-decoration: none;
+   padding: 10px;
 }

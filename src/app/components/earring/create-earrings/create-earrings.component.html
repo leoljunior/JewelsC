@@ -4,28 +4,28 @@
     <form #earringForm (submit)="save(earringForm)">
         <div class="all-fields">
             <div class="fields">
-                <span for="date-earring">Data</span>
+                <label for="date-earring">Data</label>
                 <input type="date" name="date-earring" id="date-earring" required #dateearring
                     [(ngModel)]="earring.date">
 
             </div>
             <div class="fields">
-                <span for="code-earring">Código</span>
+                <label for="code-earring">Código</label>
                 <input type="number" name="code-earring" id="code-earring" #codeearring [(ngModel)]="earring.id">
             </div>
             <div class="fields">
-                <span for="material-earring">Material</span>
+                <label for="material-earring">Material</label>
                 <input type="text" name="material-earring" minlength="8" id="material-earring"
-                    #materialearring="ngModel" [(ngModel)]="earring.material">oi
+                    #materialearring="ngModel" [(ngModel)]="earring.material">
                 
             </div>
             <div class="fields">
-                <span for="warranty-earring">Garantia</span>
+                <label for="warranty-earring">Garantia</label>
                 <input type="text" name="warranty-earring" id="warranty-earring" #warrantyearring
                     [(ngModel)]="earring.warranty">
             </div>
             <div class="fields">
-                <span for="price-earring">Preço</span>
+                <label for="price-earring">Preço</label>
                 <input type="number" name="price-earring" id="price-earring" #priceearring [(ngModel)]="earring.price">
             </div>
             <div class="sub">

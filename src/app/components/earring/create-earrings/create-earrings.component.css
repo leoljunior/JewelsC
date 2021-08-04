@@ -8,6 +8,7 @@
     align-items: center;
     text-align: center;
     width: 450px;
+    
     border-radius: 25px;
     margin-bottom: 10px;
 }
@@ -30,22 +31,20 @@ div input {
     text-align: center;
     margin: 0;
     border: 0;
-    border-bottom: solid 3px rgb(78, 1, 150);    
+    border-bottom: solid 1px rgba(91, 8, 168, 0.575);    
 }
-.fields span:hover {    
-        font-size: 20px;
-        font-weight: bolder;
-    
+
+.fields  input:hover {
+    border-bottom: 3px solid rgba(91, 8, 168, 0.575);
 }
-.fields input:focus {
-    font-size: 20px;
-    label: 20px;
+.fields  input:focus {
+    border-bottom: 3px solid rgba(91, 8, 168, 0.575);
 }
 
 .sub input {
     border: solid 1px rgb(144, 35, 245);
     border-radius: 25px;
-    background-color: rgb(101, 13, 184);
+    background-color: rgba(111, 23, 194, 0.726);
     padding: 3px;
     width: 159px;
 }
